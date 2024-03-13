@@ -1,22 +1,11 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
-import { INavItemData } from "../../types";
 
-interface INavItemProps extends INavItemData {
+interface INavItemProps {
   children?: ReactNode;
 }
 
-function NavItem({
-  label,
-  to,
-  // iconUrl,
-  children,
-}: INavItemProps) {
-  return (
-    <li>
-      <Link to={to}>{children || label}</Link>
-    </li>
-  );
+function NavItem({ children }: INavItemProps) {
+  return <li>{children}</li>;
 }
 
 export default NavItem;
