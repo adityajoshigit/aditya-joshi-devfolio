@@ -6,8 +6,8 @@ function Nav() {
   if (!navMenuItems) return null;
   return (
     <Navbar>
-      {navMenuItems.map(({ to, label, iconUrl }) => (
-        <Navbar.Item>
+      {navMenuItems.map(({ to, label, iconUrl }, index) => (
+        <Navbar.Item key={`navbar-item-${index}`}>
           <Link
             to={to}
             smooth
