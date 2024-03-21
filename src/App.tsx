@@ -15,7 +15,7 @@ function App() {
       className="App"
       data-testid="mainApp">
       Portfolio
-      {/* <Nav /> */}
+      <Nav />
       <Home />
       <AboutMe />
       <Education />
