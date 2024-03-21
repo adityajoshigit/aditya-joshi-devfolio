@@ -10,32 +10,32 @@ import {
 
 const navMenuItems = [
   {
-    to: "#home",
+    to: "home",
     label: "Home",
     element: <Home />,
   },
   {
-    to: "#about-me",
+    to: "about-me",
     label: "About Me",
     element: <AboutMe />,
   },
   {
-    to: "#edu",
+    to: "edu",
     label: "Education",
     element: <Education />,
   },
   {
-    to: "#work-exp",
+    to: "work-exp",
     label: "Work Experience",
     element: <WorkExp />,
   },
   {
-    to: "#projects",
+    to: "projects",
     label: "Projects",
     element: <Projects />,
   },
   {
-    to: "#contact",
+    to: "contact",
     label: "Wanna Chat?",
     element: <Contact />,
   },
