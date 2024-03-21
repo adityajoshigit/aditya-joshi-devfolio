@@ -14,7 +14,8 @@ function App() {
     <div
       className="App"
       data-testid="mainApp">
-      <Nav />
+      Portfolio
+      {/* <Nav /> */}
       <Home />
       <AboutMe />
       <Education />
