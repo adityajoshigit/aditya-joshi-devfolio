@@ -1,15 +1,5 @@
 import "./App.css";
 import { Nav } from "./components";
-import Navbar from "./components/Nav/Navbar";
-import navMenuItems from "./data/navigationItems";
-import {
-  AboutMe,
-  Contact,
-  Education,
-  Home,
-  Projects,
-  WorkExp,
-} from "./views";
 
 function App() {
   return (
