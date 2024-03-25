@@ -17,9 +17,7 @@ function App() {
         <section
           id="about"
           className="mb-8">
-          <h2 className="text-2xl font-semibold">
-            About Me
-          </h2>
+          <SectionHeader label="About Me" />
           <p className="mt-4">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Nulla vitae est eget turpis
@@ -45,9 +43,7 @@ function App() {
         <section
           id="work"
           className="mb-8">
-          <h2 className="text-2xl font-semibold">
-            Work Experience
-          </h2>
+          <SectionHeader label="Work Exp" />
           <p className="mt-4">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Nulla vitae est eget turpis
@@ -60,9 +56,7 @@ function App() {
         <section
           id="projects"
           className="mb-8">
-          <h2 className="text-2xl font-semibold">
-            Projects
-          </h2>
+          <SectionHeader label="Projects" />
           <p className="mt-4">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Nulla vitae est eget turpis
@@ -75,9 +69,7 @@ function App() {
         <section
           id="testimonials"
           className="mb-8">
-          <h2 className="text-2xl font-semibold">
-            Testimonials
-          </h2>
+          <SectionHeader label="Testimonials" />
           <p className="mt-4">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Nulla vitae est eget turpis
@@ -90,9 +82,7 @@ function App() {
         <section
           id="contact"
           className="mb-8">
-          <h2 className="text-2xl font-semibold">
-            Contact Me
-          </h2>
+          <SectionHeader label="Contact Me" />
           <p className="mt-4">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Nulla vitae est eget turpis
