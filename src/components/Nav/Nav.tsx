@@ -1,4 +1,5 @@
 import navMenuItems from "../../data/navigationItems";
+import { SocialMediaLinks } from "../SocialMediaLinks";
 import Navbar from "./Navbar";
 
 function Nav() {
@@ -27,18 +28,10 @@ function Nav() {
         ))}
       </Navbar>
       <div className="mt-8">
-        {/* Social Media Icons */}
-        <a
-          href="https://twitter.com"
-          className="text-white hover:text-blue-500 mr-4">
-          twitter
-        </a>
-        <a
-          href="https://linkedin.com"
-          className="text-white hover:text-blue-500 mr-4">
-          linkedin
-        </a>
-        {/* Add more social media icons as needed */}
+        <SocialMediaLinks
+          orientation="horizontal"
+          iconAlignment="center"
+        />
       </div>
     </>
   );
