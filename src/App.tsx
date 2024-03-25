@@ -1,10 +1,10 @@
 import "./App.css";
-import { Nav } from "./components";
+import { Nav, SectionHeader } from "./components";
 
 function App() {
   return (
     <div
-      className="App flex  w-screen h-screen "
+      className="App flex  w-screen h-screen text-gray-800"
       data-testid="mainApp">
       {/* Navigation Panel */}
       <div className="w-1/4 px-4 p-6 bg-gray-800 text-white">
@@ -32,9 +32,7 @@ function App() {
         <section
           id="education"
           className="mb-8">
-          <h2 className="text-2xl font-semibold">
-            Education
-          </h2>
+          <SectionHeader label="Education" />
           <p className="mt-4">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Nulla vitae est eget turpis
