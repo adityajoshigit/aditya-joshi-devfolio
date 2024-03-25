@@ -4,15 +4,15 @@ import { Nav, SectionHeader } from "./components";
 function App() {
   return (
     <div
-      className="flex w-screen h-screen text-gray-800 App"
+      className="flex bg-white h-screen text-gray-800 App"
       data-testid="mainApp">
       {/* Navigation Panel */}
-      <div className="top-0 bottom-0 left-0 fixed bg-gray-800 px-4 p-6 w-1/4 text-white">
+      <div className="fixed bg-gray-800 p-6 sm:w-1/5 h-full text-gray-100 overflow-y-auto">
         <Nav />
       </div>
 
       {/* Main Content */}
-      <div className="p-6 w-3/4">
+      <div className="ml-auto p-6 w-full sm:w-4/5 overflow-y-auto">
         {/* About Me Section */}
         <section
           id="about"

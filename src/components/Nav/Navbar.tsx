@@ -7,9 +7,11 @@ interface INavbarProps {
 
 function Navbar({ children }: INavbarProps) {
   return (
-    <nav className="mt-6">
-      <ul>{children}</ul>
-    </nav>
+    <header>
+      <nav className="flex flex-col justify-center items-center mt-6">
+        <ul>{children}</ul>
+      </nav>
+    </header>
   );
 }
 
