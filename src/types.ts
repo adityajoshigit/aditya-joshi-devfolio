@@ -11,4 +11,5 @@ export interface ISocialMediaLinkData {
   link: string;
   icon?: ReactNode;
   altText: string;
+  order?: number;
 }
