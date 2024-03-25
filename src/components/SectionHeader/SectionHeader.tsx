@@ -9,10 +9,10 @@ function SectionHeader({
 }: ISectionHeaderProps) {
   return (
     <div className={`w-full text-${align} relative`}>
-      <h1 className="text-8xl text-gray-100 absolute w-full bottom-0 z-10">
+      <h1 className="bottom-0 z-10 absolute w-full text-8xl text-gray-100">
         {label}
       </h1>
-      <h3 className="text-5xl relative w-full z-20">
+      <h3 className="relative z-20 w-full text-5xl">
         {label}
       </h3>
     </div>

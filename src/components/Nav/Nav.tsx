@@ -10,9 +10,9 @@ function Nav() {
         <img
           src="profile-picture.jpg"
           alt="Profile"
-          className="rounded-full w-24 h-24 mb-4"
+          className="mb-4 rounded-full w-24 h-24"
         />
-        <h1 className="text-xl font-semibold">Your Name</h1>
+        <h1 className="font-semibold text-xl">Your Name</h1>
       </div>
       <Navbar>
         {navMenuItems.map(({ to, label }, index) => (
