@@ -1,6 +1,6 @@
 export interface ISectionHeaderProps {
   label: string;
-  align?: string;
+  align?: "left" | "center" | "right";
 }
 
 function SectionHeader({
@@ -8,9 +8,13 @@ function SectionHeader({
   label,
 }: ISectionHeaderProps) {
   return (
-    <div className="w-full text-2xl font-semibold">
-      <h1>{label}</h1>
-      <h4>{label}</h4>
+    <div className={`w-full text-${align} relative`}>
+      <h1 className="text-8xl text-gray-100 absolute w-full bottom-0 z-10">
+        {label}
+      </h1>
+      <h3 className="text-5xl relative w-full z-20">
+        {label}
+      </h3>
     </div>
   );
 }
