@@ -1,11 +1,15 @@
 import { ReactNode } from "react";
 
 interface INavItemProps {
+  className?: string;
   children?: ReactNode;
 }
 
-function NavItem({ children }: INavItemProps) {
-  return <li>{children}</li>;
+function NavItem({
+  className = "",
+  children,
+}: INavItemProps) {
+  return <li className={className}>{children}</li>;
 }
 
 export default NavItem;

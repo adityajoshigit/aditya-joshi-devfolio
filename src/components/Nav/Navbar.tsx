@@ -7,7 +7,7 @@ interface INavbarProps {
 
 function Navbar({ children }: INavbarProps) {
   return (
-    <nav>
+    <nav className="mt-6">
       <ul>{children}</ul>
     </nav>
   );
