@@ -3,11 +3,15 @@ import NavItem from "./NavItem";
 
 interface INavbarProps {
   children: ReactNode;
+  className?: string;
 }
 
-function Navbar({ children }: INavbarProps) {
+function Navbar({
+  children,
+  className = "",
+}: INavbarProps) {
   return (
-    <header>
+    <header className={className}>
       <nav className="flex flex-col justify-center items-center mt-6">
         <ul>{children}</ul>
       </nav>

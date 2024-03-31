@@ -13,3 +13,5 @@ export interface ISocialMediaLinkData {
   altText: string;
   order?: number;
 }
+
+export type ThemeType = "DARK" | "LIGHT";

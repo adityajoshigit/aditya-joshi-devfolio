@@ -1,19 +1,19 @@
 import { SectionHeader } from "../../components";
 
-function Projects() {
+function Testimonials() {
   return (
     <section
-      id="projects"
+      id="testimonials"
       className="mb-8">
-      <SectionHeader label="Projects" />
+      <SectionHeader label="Testimonials" />
       <p className="mt-4">
         Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. Nulla vitae est eget turpis accumsan
         vulputate.
       </p>
-      {/* Add more content for Projects section */}
+      {/* Add more content for Testimonials section */}
     </section>
   );
 }
 
-export default Projects;
+export default Testimonials;
