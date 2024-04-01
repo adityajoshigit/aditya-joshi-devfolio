@@ -10,32 +10,37 @@ import {
   TEXT_WHITE,
 } from "../../constants";
 import { NameTag } from "../NameTag";
+import { RefObject } from "react";
 
-function Nav() {
+interface INavProps {
+  refMap?: { [sectionId: string]: RefObject<HTMLElement> };
+}
+
+function Nav({ refMap }: INavProps) {
   const {
     isNavOpened,
-    openNav,
-    closeNav,
-    theme,
+    selectNavItem,
+    scrollToSection,
     headerName,
+    selectedNavItem,
   } = useGlobalContext();
 
-  const navColorStyleForDark = `${BG_WHITE} ${TEXT_BRAND}`;
-  const navColorStyleForLight = `${BG_BRAND} ${TEXT_WHITE}`;
-
-  const navBranding =
-    theme === "DARK"
-      ? navColorStyleForDark
-      : navColorStyleForLight;
+  const goToSection = (to: string) => {
+    if (refMap?.[to]?.current) {
+      scrollToSection(refMap?.[to]);
+    }
+  };
 
   if (!navMenuItems) return null;
+
   return (
     <div
       className={classNames(
-        `${navBranding} flex-col items-center hidden md:flex h-screen  border-r-slate-400 shadow-lg md:w-2/5 lg:w-1/4 shadow-slate-400 rounded-e-lg px-4 py-12 space-y-6`,
+        `flex-col items-center hidden md:flex h-screen  border-r-slate-400 shadow-lg md:w-2/5 lg:w-1/4 shadow-slate-400 rounded-e-lg px-4 py-6 space-y-6 `,
         {
           flex: isNavOpened,
-        }
+        },
+        "text-white bg-gray-800"
       )}>
       <div className="relative top-0 flex flex-col items-center space-y-6 w-full name-tag">
         <NameTag
@@ -50,16 +55,21 @@ function Nav() {
           height={180}
         />
       </div>
-      <Navbar className="flex-grow w-full overflow-y-auto">
+      <Navbar className="flex-grow">
         {navMenuItems.map(({ to, label }, index) => (
           <Navbar.Item
-            className="text-center"
-            key={`navitem-${index}-${to}`}>
-            <a
-              href={`#${to}`}
-              className="block py-2">
-              {label}
-            </a>
+            className={classNames(
+              selectedNavItem === to
+                ? `text-cyan-400 font-semibold underline`
+                : `hover:text-cyan-400`,
+              "rounded-md text-center transition duration-150 cursor-pointer"
+            )}
+            key={`navitem-${index}-${to}`}
+            onClick={() => {
+              selectNavItem(to);
+              goToSection(to);
+            }}>
+            <span className="block py-2">{label}</span>
           </Navbar.Item>
         ))}
       </Navbar>

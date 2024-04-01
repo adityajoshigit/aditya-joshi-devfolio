@@ -1,8 +1,14 @@
+import { RefObject } from "react";
 import { SectionHeader } from "../../components";
 
-function Education() {
+function Education({
+  ref,
+}: {
+  ref?: RefObject<HTMLElement>;
+}) {
   return (
     <section
+      ref={ref}
       id="alma-mater"
       className="mb-8">
       <SectionHeader label="Education" />

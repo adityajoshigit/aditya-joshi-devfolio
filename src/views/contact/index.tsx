@@ -1,8 +1,14 @@
+import { RefObject } from "react";
 import { SectionHeader } from "../../components";
 
-function Contact() {
+function Contact({
+  ref,
+}: {
+  ref?: RefObject<HTMLElement>;
+}) {
   return (
     <section
+      ref={ref}
       id="contact"
       className="mb-8">
       <SectionHeader label="Contact Me" />

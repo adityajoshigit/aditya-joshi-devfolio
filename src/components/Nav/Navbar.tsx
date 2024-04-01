@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import NavItem from "./NavItem";
+import classNames from "classnames";
 
 interface INavbarProps {
   children: ReactNode;
@@ -11,9 +12,13 @@ function Navbar({
   className = "",
 }: INavbarProps) {
   return (
-    <header className={className}>
-      <nav className="flex flex-col justify-center items-center mt-6">
-        <ul>{children}</ul>
+    <header
+      className={classNames(
+        className,
+        "overflow-y-auto w-full"
+      )}>
+      <nav className="flex flex-col justify-center items-center mt-6 w-full">
+        <ul className="space-y-2 w-full">{children}</ul>
       </nav>
     </header>
   );

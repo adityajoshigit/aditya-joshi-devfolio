@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, RefObject, useState } from "react";
 import GlobalDataContext from "../contexts/GlobalDataContext";
 
 export interface IGlobalDataContextProviderProps {
@@ -10,9 +10,16 @@ function GlobalDataContextProvider({
 }: IGlobalDataContextProviderProps) {
   const [isNavOpened, setIsNavOpened] = useState(false);
   const [headerName] = useState("");
+  const [selectedNavItem, setSelectedNavItem] =
+    useState("home");
 
   const openNav = () => setIsNavOpened(true);
   const closeNav = () => setIsNavOpened(false);
+  const selectNavItem = (navItem: string) =>
+    setSelectedNavItem(navItem);
+  const scrollToSection = (ref: RefObject<HTMLElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <GlobalDataContext.Provider
@@ -20,8 +27,11 @@ function GlobalDataContextProvider({
         theme: "LIGHT",
         isNavOpened,
         headerName,
+        selectedNavItem,
         openNav,
         closeNav,
+        selectNavItem,
+        scrollToSection,
       }}>
       {children}
     </GlobalDataContext.Provider>

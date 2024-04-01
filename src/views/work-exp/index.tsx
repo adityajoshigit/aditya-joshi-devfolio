@@ -1,8 +1,14 @@
+import { RefObject } from "react";
 import { SectionHeader } from "../../components";
 
-function WorkExp() {
+function WorkExp({
+  ref,
+}: {
+  ref?: RefObject<HTMLElement>;
+}) {
   return (
     <section
+      ref={ref}
       id="work"
       className="mb-8">
       <SectionHeader label="Work Exp" />

@@ -8,7 +8,8 @@ const LinkedInIcon = () => {
   const [iconColor, setIconColor] = useState("white");
   return (
     <RxLinkedinLogo
-      size={30}
+      className="cursor-pointer"
+      size={25}
       color={iconColor}
       onMouseOver={() => setIconColor("#0077B5")}
       onMouseOut={() => setIconColor("white")}
@@ -20,9 +21,10 @@ const GithubIcon = () => {
   const [iconColor, setIconColor] = useState("white");
   return (
     <FaGithubSquare
-      size={30}
+      className="cursor-pointer"
+      size={25}
       color={iconColor}
-      onMouseOver={() => setIconColor("#0077B5")}
+      onMouseOver={() => setIconColor("#cdcdcd")}
       onMouseOut={() => setIconColor("white")}
     />
   );
@@ -32,9 +34,10 @@ const TwitterIcon = () => {
   const [iconColor, setIconColor] = useState("white");
   return (
     <FaSquareXTwitter
-      size={30}
+      className="cursor-pointer"
+      size={25}
       color={iconColor}
-      onMouseOver={() => setIconColor("#0077B5")}
+      onMouseOver={() => setIconColor("#1DA1F2")}
       onMouseOut={() => setIconColor("white")}
     />
   );
