@@ -1,21 +1,14 @@
 import socialMediaLinks from "../../data/socialMediaLinks";
 
 export interface ISocialMediaLinksProps {
-  orientation?: "vertical" | "horizontal";
-  iconAlignment?: "left" | "center" | "right";
   openIn?: "_blank" | "_self";
 }
 
 function SocialMediaLinks({
-  orientation = "horizontal",
-  iconAlignment = "center",
   openIn = "_blank",
 }: ISocialMediaLinksProps) {
-  let parentWidth = "w-full";
-  if (orientation === "vertical") parentWidth = "w-max";
-
   return (
-    <div className={`${parentWidth}`}>
+    <div className="flex flex-row justify-between w-full overflow-x-auto">
       {socialMediaLinks
         .sort((a, b) => {
           if (
@@ -26,17 +19,12 @@ function SocialMediaLinks({
           return -1;
         })
         .map(({ link, icon, altText }, index) => (
-          <p
+          <div
             key={`social-media-${index}-${altText}`}
-            className={` text-${iconAlignment}`}>
+            onClick={() => window.open(link, openIn)}
+            className="flex flex-auto justify-center items-center px-2">
             {icon}
-            <a
-              href={link}
-              className="p-2"
-              onClick={() => window.open(link, openIn)}>
-              {altText}
-            </a>
-          </p>
+          </div>
         ))}
     </div>
   );

@@ -1,5 +1,5 @@
-import React from "react";
 import { SectionHeader } from "../../components";
+import React from "react";
 
 export default React.forwardRef(
   (
@@ -15,13 +15,13 @@ export default React.forwardRef(
         ref={ref}
         id={sectionId}
         className="mb-8">
-        <SectionHeader label="Work Exp" />
+        <SectionHeader label="Testimonials" />
         <p className="mt-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing
           elit. Nulla vitae est eget turpis accumsan
           vulputate.
         </p>
-        {/* Add more content for Work Experience section */}
+        {/* Add more content for Testimonials section */}
       </section>
     );
   }

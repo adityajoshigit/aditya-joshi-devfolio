@@ -12,32 +12,32 @@ const navMenuItems = [
   {
     to: "home",
     label: "Home",
-    element: <Home />,
+    element: Home,
   },
   {
     to: "about-me",
     label: "About Me",
-    element: <AboutMe />,
+    element: AboutMe,
   },
   {
     to: "edu",
     label: "Education",
-    element: <Education />,
+    element: Education,
   },
   {
     to: "work-exp",
     label: "Work Experience",
-    element: <WorkExp />,
+    element: WorkExp,
   },
   {
     to: "projects",
     label: "Projects",
-    element: <Projects />,
+    element: Projects,
   },
   {
     to: "contact",
     label: "Wanna Chat?",
-    element: <Contact />,
+    element: Contact,
   },
 ] as INavItemData[];
 

@@ -1,5 +1,20 @@
-function Home() {
-  return <div id="home">Home</div>;
-}
+import React from "react";
 
-export default Home;
+export default React.forwardRef(
+  (
+    {
+      sectionId,
+    }: {
+      sectionId: string;
+    },
+    ref: React.ForwardedRef<HTMLElement>
+  ) => {
+    return (
+      <section
+        id={sectionId}
+        ref={ref}>
+        Home
+      </section>
+    );
+  }
+);

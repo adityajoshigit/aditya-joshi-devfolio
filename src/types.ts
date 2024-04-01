@@ -4,7 +4,11 @@ export interface INavItemData {
   label: string;
   to: string;
   iconUrl?: string;
-  element?: JSX.Element;
+  element?: React.ForwardRefExoticComponent<
+    {
+      sectionId?: string;
+    } & React.RefAttributes<HTMLElement>
+  >;
 }
 
 export interface ISocialMediaLinkData {
@@ -13,3 +17,5 @@ export interface ISocialMediaLinkData {
   altText: string;
   order?: number;
 }
+
+export type ThemeType = "DARK" | "LIGHT";

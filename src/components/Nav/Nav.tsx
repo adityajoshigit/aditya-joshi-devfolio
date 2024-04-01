@@ -1,39 +1,93 @@
+import classNames from "classnames";
 import navMenuItems from "../../data/navigationItems";
 import { SocialMediaLinks } from "../SocialMediaLinks";
 import Navbar from "./Navbar";
+import useGlobalContext from "../../hooks/useGlobalContext";
+import { NameTag } from "../NameTag";
+import { RefObject } from "react";
 
-function Nav() {
+interface INavProps {
+  refMap?: { [sectionId: string]: RefObject<HTMLElement> };
+}
+
+function Nav({ refMap }: INavProps) {
+  const {
+    isNavOpened,
+    selectNavItem,
+    scrollToSection,
+    headerName,
+    selectedNavItem,
+  } = useGlobalContext();
+
+  const goToSection = (to: string) => {
+    console.log(`to: ${to}`);
+    if (refMap?.[to]?.current) {
+      scrollToSection(refMap?.[to]);
+    }
+  };
+
   if (!navMenuItems) return null;
+
   return (
-    <>
-      <div className="flex flex-col items-center">
-        <img
-          src="profile-picture.jpg"
-          alt="Profile"
-          className="mb-4 rounded-full w-24 h-24"
+    <div
+      className={classNames(
+        `
+        flex-col 
+        items-center 
+        hidden 
+        md:flex 
+        md:fixed 
+        h-screen  
+        border-r-slate-400 
+        shadow-lg 
+        md:w-2/5 
+        lg:w-1/4 
+        shadow-slate-400 
+        rounded-e-lg 
+        px-4 
+        py-6 
+        space-y-6 
+        `,
+        {
+          flex: isNavOpened,
+        },
+        "text-white bg-gray-800"
+      )}>
+      <div className="relative top-0 flex flex-col items-center space-y-6 w-full name-tag">
+        <NameTag
+          name={headerName || "Aditya Joshi"}
+          className="md:text-4xl lg:text-4xl"
         />
-        <h1 className="font-semibold text-xl">Your Name</h1>
+        <img
+          src="/images/prof_pic_asj.PNG"
+          alt="Profile"
+          className="mb-4 rounded-full"
+          width={180}
+          height={180}
+        />
       </div>
-      <Navbar>
+      <Navbar className="flex-grow">
         {navMenuItems.map(({ to, label }, index) => (
           <Navbar.Item
-            className="text-center"
-            key={`navitem-${index}-${to}`}>
-            <a
-              href={`#${to}`}
-              className="block py-2">
-              {label}
-            </a>
+            className={classNames(
+              selectedNavItem === to
+                ? `text-cyan-400 font-semibold underline`
+                : `hover:text-cyan-400`,
+              "rounded-md text-center transition duration-150 cursor-pointer"
+            )}
+            key={`navitem-${index}-${to}`}
+            onClick={() => {
+              selectNavItem(to);
+              goToSection(to);
+            }}>
+            <span className="block py-2">{label}</span>
           </Navbar.Item>
         ))}
       </Navbar>
-      <div className="mt-8">
-        <SocialMediaLinks
-          orientation="horizontal"
-          iconAlignment="center"
-        />
+      <div className="flex flex-row flex-initial w-full">
+        <SocialMediaLinks />
       </div>
-    </>
+    </div>
   );
 }
 
