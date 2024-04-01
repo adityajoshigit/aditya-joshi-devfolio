@@ -1,14 +1,7 @@
-import { useRef } from "react";
+import { RefObject, useRef } from "react";
 import "./App.css";
 import { MobileHeader, Nav } from "./components";
-import {
-  AboutMe,
-  Education,
-  Contact,
-  Projects,
-  Testimonials,
-  WorkExp,
-} from "./views";
+import navMenuItems from "./data/navigationItems";
 
 function App() {
   const aboutMeRef = useRef<HTMLElement>(null);
@@ -19,13 +12,16 @@ function App() {
   const workExpRef = useRef<HTMLElement>(null);
   const homeRef = useRef<HTMLElement>(null);
 
-  const refMap = {
+  const refMap: {
+    [sectionId: string]: RefObject<HTMLElement>;
+  } = {
     "about-me": aboutMeRef,
-    "alma-mater": educationRef,
+    edu: educationRef,
     contact: contactRef,
     projects: projectsRef,
     testimonials: testimonialsRef,
     home: homeRef,
+    "work-exp": workExpRef,
   };
 
   return (
@@ -35,22 +31,29 @@ function App() {
         className="flex App"
         data-testid="mainApp">
         {/* Navigation Panel */}
-        <Nav />
+        <Nav refMap={refMap} />
 
         {/* Main Content */}
-        <div className="ml-auto p-6 w-full sm:w-4/5 overflow-y-auto">
-          {/* About Me Section */}
-          <AboutMe ref={aboutMeRef} />
-          {/* Education Section */}
-          <Education ref={educationRef} />
-          {/* Work Experience Section */}
-          <Contact ref={contactRef} />
-          {/* Projects Section */}
-          <Projects ref={projectsRef} />
-          {/* Testimonials Section */}
-          <Testimonials ref={testimonialsRef} />
-          {/* Contact Me Section */}
-          <WorkExp ref={workExpRef} />
+        <div
+          className={`
+            ml-auto 
+            p-6 
+            w-full 
+            overflow-y-auto
+            md:w-3/5 
+            lg:w-3/4 
+            `}>
+          {navMenuItems.map(navItem => {
+            if (!navItem.element) return null;
+            const Component = navItem.element;
+            return (
+              <Component
+                key={`section-${navItem.to}`}
+                sectionId={navItem.to}
+                ref={refMap?.[navItem.to]}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

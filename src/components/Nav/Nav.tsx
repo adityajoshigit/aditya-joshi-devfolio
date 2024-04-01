@@ -26,6 +26,7 @@ function Nav({ refMap }: INavProps) {
   } = useGlobalContext();
 
   const goToSection = (to: string) => {
+    console.log(`to: ${to}`);
     if (refMap?.[to]?.current) {
       scrollToSection(refMap?.[to]);
     }
@@ -36,7 +37,23 @@ function Nav({ refMap }: INavProps) {
   return (
     <div
       className={classNames(
-        `flex-col items-center hidden md:flex h-screen  border-r-slate-400 shadow-lg md:w-2/5 lg:w-1/4 shadow-slate-400 rounded-e-lg px-4 py-6 space-y-6 `,
+        `
+        flex-col 
+        items-center 
+        hidden 
+        md:flex 
+        md:fixed 
+        h-screen  
+        border-r-slate-400 
+        shadow-lg 
+        md:w-2/5 
+        lg:w-1/4 
+        shadow-slate-400 
+        rounded-e-lg 
+        px-4 
+        py-6 
+        space-y-6 
+        `,
         {
           flex: isNavOpened,
         },

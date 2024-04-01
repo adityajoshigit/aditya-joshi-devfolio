@@ -2,11 +2,18 @@ import React from "react";
 import { SectionHeader } from "../../components";
 
 export default React.forwardRef(
-  (_, ref: React.ForwardedRef<HTMLElement>) => {
+  (
+    {
+      sectionId,
+    }: {
+      sectionId: string;
+    },
+    ref: React.ForwardedRef<HTMLElement>
+  ) => {
     return (
       <section
         ref={ref}
-        id="work"
+        id={sectionId}
         className="mb-8">
         <SectionHeader label="Work Exp" />
         <p className="mt-4">
