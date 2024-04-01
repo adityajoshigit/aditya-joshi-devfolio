@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import React from "react";
 import {
   BG_BRAND,
   BG_WHITE,
@@ -36,7 +35,7 @@ function MobileHeader({
           className="border-white p-2 max-w-fit internal-container"
           onClick={onMenuClick}>
           <img
-            alt="profile-picture"
+            alt="profile"
             src="/images/prof_pic_asj.PNG"
             width="50"
             height="60"

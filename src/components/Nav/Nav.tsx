@@ -3,12 +3,6 @@ import navMenuItems from "../../data/navigationItems";
 import { SocialMediaLinks } from "../SocialMediaLinks";
 import Navbar from "./Navbar";
 import useGlobalContext from "../../hooks/useGlobalContext";
-import {
-  BG_BRAND,
-  BG_WHITE,
-  TEXT_BRAND,
-  TEXT_WHITE,
-} from "../../constants";
 import { NameTag } from "../NameTag";
 import { RefObject } from "react";
 

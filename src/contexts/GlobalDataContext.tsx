@@ -1,4 +1,4 @@
-import React, { RefObject, createContext } from "react";
+import { RefObject, createContext } from "react";
 import { ThemeType } from "../types";
 
 export interface IGlobalDataContextProps {
