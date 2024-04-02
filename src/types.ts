@@ -30,3 +30,10 @@ export interface ISocialMediaLinkData {
 }
 
 export type ThemeType = "DARK" | "LIGHT";
+
+export interface IContactFormValues {
+  name: string;
+  email: string;
+  comment: string;
+  topics?: string[];
+}
