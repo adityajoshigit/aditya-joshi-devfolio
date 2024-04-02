@@ -1,15 +1,10 @@
-import { useState } from "react";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 
 const TwitterIcon = () => {
-  const [iconColor, setIconColor] = useState("white");
   return (
-    <FaSquareXTwitter
-      className="cursor-pointer"
+    <FaXTwitter
+      className="hover:text-blue-500 transition duration-150 cursor-pointer"
       size={20}
-      color={iconColor}
-      onMouseOver={() => setIconColor("#1DA1F2")}
-      onMouseOut={() => setIconColor("white")}
     />
   );
 };

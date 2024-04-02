@@ -1,15 +1,10 @@
-import { useState } from "react";
-import { RxLinkedinLogo } from "react-icons/rx";
+import { BiLogoLinkedin } from "react-icons/bi";
 
 const LinkedInIcon = () => {
-  const [iconColor, setIconColor] = useState("white");
   return (
-    <RxLinkedinLogo
-      className="cursor-pointer"
+    <BiLogoLinkedin
+      className="hover:text-sky-600 transition duration-150 cursor-pointer"
       size={20}
-      color={iconColor}
-      onMouseOver={() => setIconColor("#0077B5")}
-      onMouseOut={() => setIconColor("white")}
     />
   );
 };

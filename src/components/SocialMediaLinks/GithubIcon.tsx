@@ -1,15 +1,10 @@
-import { useState } from "react";
-import { FaGithubSquare } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
 
 const GithubIcon = () => {
-  const [iconColor, setIconColor] = useState("white");
   return (
-    <FaGithubSquare
-      className="cursor-pointer"
+    <IoLogoGithub
+      className="hover:text-gray-400 transition duration-150 cursor-pointer"
       size={20}
-      color={iconColor}
-      onMouseOver={() => setIconColor("#cdcdcd")}
-      onMouseOut={() => setIconColor("white")}
     />
   );
 };

@@ -1,5 +1,6 @@
 import socialMediaLinks from "../../data/socialMediaLinks";
 import { SocialMediaComponentMapType } from "../../types";
+import FrontendMentorIcon from "./FrontendMentorIcon";
 import GithubIcon from "./GithubIcon";
 import LinkedInIcon from "./LinkedInIcon";
 import TwitterIcon from "./TwitterIcon";
@@ -16,6 +17,7 @@ function SocialMediaLinks({
       github: <GithubIcon />,
       linkedin: <LinkedInIcon />,
       twitter: <TwitterIcon />,
+      "frontend-mentor": <FrontendMentorIcon />,
     };
 
   return (
@@ -29,10 +31,19 @@ function SocialMediaLinks({
             return a.order - b.order;
           return -1;
         })
+        .filter(menuItem => !!menuItem.show)
         .map(({ link, altText, id }, index) => (
           <div
             key={`social-media-${index}-${altText}`}
-            onClick={() => window.open(link, openIn)}
+            onClick={(
+              e: React.MouseEvent<
+                HTMLDivElement,
+                MouseEvent
+              >
+            ) => {
+              e.preventDefault();
+              window.open(link, openIn);
+            }}
             className="flex flex-auto justify-center items-center px-2">
             {socialMediaComponentMap[id]}
           </div>

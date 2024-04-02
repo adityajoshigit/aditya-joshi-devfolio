@@ -14,7 +14,8 @@ export interface INavItemData {
 export type SocialMediaType =
   | "linkedin"
   | "github"
-  | "twitter";
+  | "twitter"
+  | "frontend-mentor";
 
 export type SocialMediaComponentMapType = {
   [socialMediaTypeId in SocialMediaType]: ReactNode;
@@ -25,6 +26,7 @@ export interface ISocialMediaLinkData {
   altText: string;
   order?: number;
   id: SocialMediaType;
+  show?: boolean;
 }
 
 export type ThemeType = "DARK" | "LIGHT";

@@ -17,8 +17,8 @@ function Navbar({
         className,
         "overflow-y-auto w-full"
       )}>
-      <nav className="flex flex-col justify-center items-center mt-6 w-full">
-        <ul className="space-y-2 w-full">{children}</ul>
+      <nav className="flex flex-col justify-center items-center mt-2 w-full">
+        <ul className="space-y-1 w-full">{children}</ul>
       </nav>
     </header>
   );
