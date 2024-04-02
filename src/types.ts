@@ -11,11 +11,20 @@ export interface INavItemData {
   >;
 }
 
+export type SocialMediaType =
+  | "linkedin"
+  | "github"
+  | "twitter";
+
+export type SocialMediaComponentMapType = {
+  [socialMediaTypeId in SocialMediaType]: ReactNode;
+};
+
 export interface ISocialMediaLinkData {
   link: string;
-  icon?: ReactNode;
   altText: string;
   order?: number;
+  id: SocialMediaType;
 }
 
 export type ThemeType = "DARK" | "LIGHT";
