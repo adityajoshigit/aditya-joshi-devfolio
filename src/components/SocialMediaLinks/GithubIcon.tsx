@@ -6,7 +6,7 @@ const GithubIcon = () => {
   return (
     <FaGithubSquare
       className="cursor-pointer"
-      size={25}
+      size={20}
       color={iconColor}
       onMouseOver={() => setIconColor("#cdcdcd")}
       onMouseOut={() => setIconColor("white")}

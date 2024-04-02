@@ -6,7 +6,7 @@ const LinkedInIcon = () => {
   return (
     <RxLinkedinLogo
       className="cursor-pointer"
-      size={25}
+      size={20}
       color={iconColor}
       onMouseOver={() => setIconColor("#0077B5")}
       onMouseOut={() => setIconColor("white")}

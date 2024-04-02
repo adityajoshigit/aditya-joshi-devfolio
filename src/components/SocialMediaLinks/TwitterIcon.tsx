@@ -6,7 +6,7 @@ const TwitterIcon = () => {
   return (
     <FaSquareXTwitter
       className="cursor-pointer"
-      size={25}
+      size={20}
       color={iconColor}
       onMouseOver={() => setIconColor("#1DA1F2")}
       onMouseOut={() => setIconColor("white")}
