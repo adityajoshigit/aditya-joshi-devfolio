@@ -1,8 +1,6 @@
 import { TypeWriter } from "../../components";
 
-export interface IHomeViewProps {}
-
-function HomeView({}: IHomeViewProps) {
+function HomeView() {
   return (
     <div className="flex flex-col justify-center items-center bg-orange-100 w-full h-[500px]">
       <span>Hey, there! 👋</span>
