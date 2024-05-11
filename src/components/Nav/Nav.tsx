@@ -5,10 +5,10 @@ import Navbar from "./Navbar";
 import useGlobalContext from "../../hooks/useGlobalContext";
 import { NameTag } from "../NameTag";
 import { RefObject } from "react";
-import {
-  bgColorScheme,
-  textColorScheme,
-} from "../../constants";
+// import {
+//   bgColorScheme,
+//   textColorScheme,
+// } from "../../constants";
 
 interface INavProps {
   refMap?: { [sectionId: string]: RefObject<HTMLElement> };
@@ -54,7 +54,7 @@ function Nav({ refMap }: INavProps) {
         {
           flex: isNavOpened,
         },
-        `text-white ${bgColorScheme.gray[800]}`
+        `text-white bg-gray-800`
       )}>
       <div className="relative top-0 flex flex-col items-center space-y-6 pt-6 w-full name-tag">
         <NameTag
@@ -74,8 +74,8 @@ function Nav({ refMap }: INavProps) {
           <Navbar.Item
             className={classNames(
               selectedNavItem === to
-                ? `${textColorScheme.cyan[300]} font-semibold underline`
-                : `hover:${textColorScheme.cyan[300]}`,
+                ? `text-cyan-300 font-semibold underline`
+                : `hover:text-cyan-300`,
               "rounded-md text-center transition duration-150 cursor-pointer"
             )}
             key={`navitem-${index}-${to}`}

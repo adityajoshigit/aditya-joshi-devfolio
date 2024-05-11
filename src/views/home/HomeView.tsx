@@ -1,9 +1,9 @@
 import { TypeWriter } from "../../components";
-import {
-  textColorScheme,
-  bgColorScheme,
-  borderColorScheme,
-} from "../../constants";
+// import {
+//   textColorScheme,
+//   bgColorScheme,
+//   borderColorScheme,
+// } from "../../constants";
 
 function HomeView() {
   return (
@@ -73,10 +73,10 @@ function HomeView() {
             shadow-md 
             rounded-lg
             text-white
-            ${bgColorScheme.cyan[400]} 
-            hover:${bgColorScheme.cyan[600]} 
-            active:border-2 active:outline-2 active:outline-offset-4 active:${borderColorScheme.cyan[300]}
-            focus:${borderColorScheme.cyan[300]} focus:outline-2 focus:outline-offset-4
+            bg-cyan-400
+            hover:bg-cyan-600 
+            active:border-2 active:outline-2 active:outline-offset-4 active:border-cyan-600
+            focus:border-cyan-300 focus:outline-2 focus:outline-offset-4
           `}
           onClick={(
             event: React.MouseEvent<
