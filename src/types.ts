@@ -48,3 +48,8 @@ export type TypeWriterFeedType = Array<{
   command: TypeWriterCommand;
   payload: string | number;
 }>;
+
+export type ColorSchemeType = Record<
+  string,
+  Record<number | string, string>
+>;
