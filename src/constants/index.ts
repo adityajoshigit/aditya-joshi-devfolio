@@ -1,4 +1,8 @@
-import { ColorSchemeType } from "../types";
+import {
+  BgColorSchemeType,
+  BorderColorSchemeType,
+  TextColorSchemeType,
+} from "../types";
 
 export const DEFAULT_ACTIVE_NAV_ITEM = "home";
 
@@ -6,7 +10,7 @@ export const BG_WHITE = "bg-gray-50";
 export const BG_BRAND = "bg-gray-800";
 export const TEXT_WHITE = "text-gray-50";
 export const TEXT_BRAND = "text-gray-800";
-export const textColorScheme: ColorSchemeType = {
+export const textColorScheme: TextColorSchemeType = {
   cyan: {
     50: "text-cyan-50",
     100: "text-cyan-100",
@@ -135,7 +139,7 @@ export const textColorScheme: ColorSchemeType = {
   },
 };
 
-export const bgColorScheme: ColorSchemeType = {
+export const bgColorScheme: BgColorSchemeType = {
   lime: {
     50: "bg-lime-50",
     100: "bg-lime-100",
@@ -324,7 +328,7 @@ export const bgColorScheme: ColorSchemeType = {
   },
 };
 
-export const borderColorScheme: ColorSchemeType = {
+export const borderColorScheme: BorderColorSchemeType = {
   cyan: {
     50: "border-cyan-50",
     100: "border-cyan-100",
