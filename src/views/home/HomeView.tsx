@@ -4,13 +4,13 @@ export interface IHomeViewProps {}
 
 function HomeView({}: IHomeViewProps) {
   return (
-    <div className="">
-      <span>Welcome</span>
+    <div className="flex flex-col justify-center items-center bg-orange-100 w-full h-[500px]">
+      <span>Hey, there! 👋</span>
       <TypeWriter
         feed={[
           {
             command: "TYPE",
-            payload: "Hello, I'm Aditya!",
+            payload: "I'm Aditya!",
           },
           {
             command: "PAUSE_FOR",
@@ -30,11 +30,11 @@ function HomeView({}: IHomeViewProps) {
           },
           {
             command: "DELETE_CHAR",
-            payload: 18,
+            payload: 9,
           },
           {
             command: "TYPE",
-            payload: "Software Developer.",
+            payload: "Developer.",
           },
           {
             command: "PAUSE_FOR",
@@ -42,7 +42,7 @@ function HomeView({}: IHomeViewProps) {
           },
           {
             command: "DELETE_CHAR",
-            payload: 18,
+            payload: 19,
           },
           {
             command: "TYPE",
