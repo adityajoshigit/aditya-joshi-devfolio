@@ -1,5 +1,6 @@
 import React from "react";
 import { SectionHeader } from "../../components";
+import WorkExpView from "./WorkExpView";
 
 export default React.forwardRef(
   (
@@ -16,11 +17,7 @@ export default React.forwardRef(
         id={sectionId}
         className="mb-8">
         <SectionHeader label="Work Exp" />
-        <p className="mt-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nulla vitae est eget turpis accumsan
-          vulputate.
-        </p>
+        <WorkExpView />
         {/* Add more content for Work Experience section */}
       </section>
     );
