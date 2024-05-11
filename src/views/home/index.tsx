@@ -1,4 +1,5 @@
 import React from "react";
+import HomeView from "./HomeView";
 
 export default React.forwardRef(
   (
@@ -13,7 +14,7 @@ export default React.forwardRef(
       <section
         id={sectionId}
         ref={ref}>
-        Home
+        <HomeView />
       </section>
     );
   }
