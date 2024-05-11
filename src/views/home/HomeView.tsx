@@ -2,6 +2,7 @@ import { TypeWriter } from "../../components";
 import {
   textColorScheme,
   bgColorScheme,
+  borderColorScheme,
 } from "../../constants";
 
 function HomeView() {
@@ -65,13 +66,17 @@ function HomeView() {
       <div className="flex flex-row justify-between items-center mt-2">
         <button
           className={`
-            p-4 
-            rounded-md 
-            ${textColorScheme.black[50]} 
-            ${bgColorScheme.lime[500]}
-            focus:outline-none focus:ring
-            hover:${bgColorScheme.lime[600]} hover:scale-105 hover:transition
-            active:${bgColorScheme.lime[700]} 
+            border-2
+            border-transparent
+            p-2 
+            m-1
+            shadow-md 
+            rounded-lg
+            text-white
+            ${bgColorScheme.cyan[400]} 
+            hover:${bgColorScheme.cyan[600]} 
+            active:border-2 active:outline-2 active:outline-offset-4 active:${borderColorScheme.cyan[300]}
+            focus:${borderColorScheme.cyan[300]} focus:outline-2 focus:outline-offset-4
           `}
           onClick={(
             event: React.MouseEvent<
@@ -84,15 +89,6 @@ function HomeView() {
           Know More About me
         </button>
         <button
-          className={`
-            p-4 
-            rounded-md 
-            ${textColorScheme.black[50]} 
-            ${bgColorScheme.lime[500]}
-            focus:outline-none focus:ring
-            hover:${bgColorScheme.lime[600]} hover:scale-105 hover:transition
-            active:${bgColorScheme.lime[700]} 
-          `}
           onClick={(
             event: React.MouseEvent<
               HTMLButtonElement,

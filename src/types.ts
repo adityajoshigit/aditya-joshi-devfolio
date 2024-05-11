@@ -48,3 +48,43 @@ export type TypeWriterFeedType = Array<{
   command: TypeWriterCommand;
   payload: string | number;
 }>;
+
+export type ColorKeyType =
+  | "cyan"
+  | "lime"
+  | "gray"
+  | "red"
+  | "yellow"
+  | "green"
+  | "blue"
+  | "slate"
+  | "zinc"
+  | "stone"
+  | "neutral"
+  | "indigo"
+  | "purple"
+  | "pink"
+  | "black"
+  | "white"
+  | "violet";
+
+export type TextColorSchemeType = Record<
+  Exclude<
+    ColorKeyType,
+    "zinc" | "slate" | "stone" | "neutral" | "violet"
+  >,
+  Record<number | string, string>
+>;
+
+export type BgColorSchemeType = Record<
+  ColorKeyType,
+  Record<number | string, string>
+>;
+
+export type BorderColorSchemeType = Record<
+  Exclude<
+    ColorKeyType,
+    "zinc" | "slate" | "stone" | "neutral" | "violet"
+  >,
+  Record<number | string, string>
+>;
