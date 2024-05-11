@@ -1,8 +1,12 @@
 import { TypeWriter } from "../../components";
+import {
+  textColorScheme,
+  bgColorScheme,
+} from "../../constants";
 
 function HomeView() {
   return (
-    <div className="flex flex-col justify-center items-center bg-orange-100 w-full h-[500px]">
+    <>
       <span>Hey, there! 👋</span>
       <TypeWriter
         feed={[
@@ -57,7 +61,19 @@ function HomeView() {
         ]}
         playInLoop
       />
-    </div>
+      <button
+        className={`${bgColorScheme.lime[500]}  hover:${bgColorScheme.lime[600]} active:${bgColorScheme.lime[700]} p-4 rounded-md focus:outline-none focus:ring ${textColorScheme.white[50]}`}
+        onClick={(
+          event: React.MouseEvent<
+            HTMLButtonElement,
+            MouseEvent
+          >
+        ) => {
+          event.preventDefault();
+        }}>
+        Know More About me
+      </button>
+    </>
   );
 }
 

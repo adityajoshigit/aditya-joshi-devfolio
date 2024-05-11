@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import useGlobalContext from "../../hooks/useGlobalContext";
 import { NameTag } from "../NameTag";
 import { RefObject } from "react";
+import { textColorScheme } from "../../constants";
 
 interface INavProps {
   refMap?: { [sectionId: string]: RefObject<HTMLElement> };
@@ -70,8 +71,8 @@ function Nav({ refMap }: INavProps) {
           <Navbar.Item
             className={classNames(
               selectedNavItem === to
-                ? `text-cyan-400 font-semibold underline`
-                : `hover:text-cyan-400`,
+                ? `${textColorScheme.lime[600]} font-semibold underline`
+                : `hover:${textColorScheme.lime[600]}`,
               "rounded-md text-center transition duration-150 cursor-pointer"
             )}
             key={`navitem-${index}-${to}`}

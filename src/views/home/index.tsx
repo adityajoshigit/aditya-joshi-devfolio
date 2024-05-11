@@ -13,7 +13,8 @@ export default React.forwardRef(
     return (
       <section
         id={sectionId}
-        ref={ref}>
+        ref={ref}
+        className="flex flex-col justify-center items-center bg-slate-50 w-full min-h-[100vh]">
         <HomeView />
       </section>
     );

@@ -38,8 +38,8 @@ function App() {
           className={`
             ml-auto 
             p-6 
+            md:p-0
             w-full 
-            overflow-y-auto
             md:w-3/5 
             lg:w-3/4 
             space-y-12
