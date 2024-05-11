@@ -1,19 +1,27 @@
 import TypewriterComponent, {
   TypewriterClass,
 } from "typewriter-effect";
-import { isArray } from "lodash";
+import { TypeWriterFeedType } from "../../types";
+import translateTypewriterFeed from "../../utils/translateTypewriterFeed";
 
 export interface ITypeWriterProps {
-  text: string | string[];
+  feed?: TypeWriterFeedType;
+  playInLoop?: boolean;
 }
 
-function TypeWriter({ text }: ITypeWriterProps) {
+function TypeWriter({
+  feed = [],
+  playInLoop = false,
+}: ITypeWriterProps) {
   return (
     <TypewriterComponent
-      options={{
-        autoStart: true,
-        strings: isArray(text) ? text : [text as string],
-        loop: true,
+      options={{ loop: playInLoop }}
+      onInit={(typewriter: TypewriterClass) => {
+        const typewriterInstance = translateTypewriterFeed(
+          typewriter,
+          feed
+        );
+        typewriterInstance.start();
       }}
     />
   );

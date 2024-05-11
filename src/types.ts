@@ -37,3 +37,14 @@ export interface IContactFormValues {
   comment: string;
   topics?: string[];
 }
+
+export type TypeWriterCommand =
+  | "TYPE"
+  | "PAUSE_FOR"
+  | "DELETE_ALL"
+  | "DELETE_CHAR";
+
+export type TypeWriterFeedType = Array<{
+  command: TypeWriterCommand;
+  payload: string | number;
+}>;
