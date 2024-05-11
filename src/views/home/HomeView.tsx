@@ -9,6 +9,7 @@ function HomeView() {
     <>
       <span>Hey, there! 👋</span>
       <TypeWriter
+        className="my-1"
         feed={[
           {
             command: "TYPE",
@@ -61,18 +62,48 @@ function HomeView() {
         ]}
         playInLoop
       />
-      <button
-        className={`${bgColorScheme.lime[500]}  hover:${bgColorScheme.lime[600]} active:${bgColorScheme.lime[700]} p-4 rounded-md focus:outline-none focus:ring ${textColorScheme.white[50]}`}
-        onClick={(
-          event: React.MouseEvent<
-            HTMLButtonElement,
-            MouseEvent
-          >
-        ) => {
-          event.preventDefault();
-        }}>
-        Know More About me
-      </button>
+      <div className="flex flex-row justify-between items-center mt-2">
+        <button
+          className={`
+            p-4 
+            rounded-md 
+            ${textColorScheme.black[50]} 
+            ${bgColorScheme.lime[500]}
+            focus:outline-none focus:ring
+            hover:${bgColorScheme.lime[600]} hover:scale-105 hover:transition
+            active:${bgColorScheme.lime[700]} 
+          `}
+          onClick={(
+            event: React.MouseEvent<
+              HTMLButtonElement,
+              MouseEvent
+            >
+          ) => {
+            event.preventDefault();
+          }}>
+          Know More About me
+        </button>
+        <button
+          className={`
+            p-4 
+            rounded-md 
+            ${textColorScheme.black[50]} 
+            ${bgColorScheme.lime[500]}
+            focus:outline-none focus:ring
+            hover:${bgColorScheme.lime[600]} hover:scale-105 hover:transition
+            active:${bgColorScheme.lime[700]} 
+          `}
+          onClick={(
+            event: React.MouseEvent<
+              HTMLButtonElement,
+              MouseEvent
+            >
+          ) => {
+            event.preventDefault();
+          }}>
+          Checkout My Resume
+        </button>
+      </div>
     </>
   );
 }
