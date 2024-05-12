@@ -20,7 +20,7 @@ function WorkExpInfoCard({
   return (
     <div
       className={classNames(
-        "group min-h-fit grid grid-cols-1 gap-1",
+        "group min-h-fit grid grid-cols-1",
         className
       )}>
       <div className="gap-0 grid grid-cols-2">

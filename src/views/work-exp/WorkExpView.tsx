@@ -3,9 +3,10 @@ import workExpData from "../../data/workExpData";
 
 function WorkExpView() {
   return (
-    <div className="gap-0 grid grid-cols-1">
-      {workExpData.map(
-        ({ role, company, tenure }, index) => {
+    <div className="gap-0 gap-y-2 grid grid-cols-1">
+      {workExpData.map(({ role, company, tenure }) =>
+        // index
+        {
           return (
             <>
               <WorkExpInfoCard
