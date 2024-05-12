@@ -1,14 +1,13 @@
 import classNames from "classnames";
 import { ShowMoreLayout } from "../";
+import { WorkExpDetailsType } from "../../types";
 
 type AlignmentType = "left" | "right";
 
-export interface IWorkExpInfoCardProps {
+export interface IWorkExpInfoCardProps
+  extends WorkExpDetailsType {
   className?: string;
   align?: AlignmentType;
-  role: string;
-  company: string;
-  tenure: string;
 }
 
 function WorkExpInfoCard({
@@ -21,26 +20,34 @@ function WorkExpInfoCard({
   return (
     <div
       className={classNames(
-        "group min-h-fit grid grid-cols-1 gap-0 md:grid-cols-2",
-        className
+        "group min-h-fit flex ",
+        className,
+        {
+          "flex-row": align === "left",
+          "flex-row-reverse items-start ":
+            align === "right",
+        }
       )}>
       <div
         className={classNames(
-          `p-2 border-r border-r-cyan-600 flex flex-col justify-center 
+          `w-1/2 p-2 flex flex-col 
           group-hover:bg-cyan-400 
           group-hover:text-white
           transition duration-200
+          justify-center 
           `,
           {
-            "items-end ": align === "left",
-            "items-start ": align === "right",
+            " items-end  border-r border-r-cyan-600":
+              align === "left",
+            " items-start  border-l border-l-cyan-600":
+              align === "right",
           }
         )}>
         <span>{role}</span>
         <span>{company}</span>
         <span>{tenure}</span>
       </div>
-      <div className="group-hover:bg-gray-100 p-2 transition duration-200">
+      <div className="group-hover:bg-gray-100 p-2 w-1/2 transition duration-200">
         <ShowMoreLayout>
           <p className="mt-4">
             Lorem ipsum dolor sit amet, consectetur
