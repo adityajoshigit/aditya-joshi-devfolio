@@ -88,3 +88,9 @@ export type BorderColorSchemeType = Record<
   >,
   Record<number | string, string>
 >;
+
+export type WorkExpDetailsType = {
+  role: string;
+  company: string;
+  tenure: string;
+};
