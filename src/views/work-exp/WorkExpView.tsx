@@ -11,7 +11,8 @@ function WorkExpView() {
             company={company}
             tenure={tenure}
             align={
-              (index + 1) % 2 === 0 ? "right" : "left"
+              // (index + 1) % 2 === 0 ? "right" : "left"
+              "left"
             }></WorkExpInfoCard>
         )
       )}

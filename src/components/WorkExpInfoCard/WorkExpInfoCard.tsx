@@ -44,66 +44,28 @@ function WorkExpInfoCard({
           }
         )}>
         <span>{role}</span>
-        <span>{company}</span>
+        <p className="text-ellipsis">{company}</p>
         <span>{tenure}</span>
       </div>
       <div className="group-hover:bg-gray-100 p-2 w-1/2 transition duration-200">
-        <ShowMoreLayout>
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Nulla vitae est eget turpis
-            accumsan vulputate.
-          </p>
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Nulla vitae est eget turpis
-            accumsan vulputate.
-          </p>
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Nulla vitae est eget turpis
-            accumsan vulputate. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Odio magnam
-            quibusdam recusandae consequuntur cum nisi.
-            Laudantium cumque adipisci nihil sunt atque,
-            eveniet aspernatur! Delectus quas eius iusto
-            laudantium adipisci tempora. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit.
-            Voluptatem pariatur error, sapiente officia
-            eaque voluptatum adipisci ea est asperiores vel
-            tempora magni deserunt cumque saepe perspiciatis
-            natus. Debitis, eum perferendis!Lorem Lorem
-            ipsum dolor, sit amet consectetur adipisicing
-            elit. Eius blanditiis dolor veniam porro odit
-            earum quod? Quod voluptas, praesentium fugiat
-            iure laboriosam eius quas, nisi expedita minus
-            cupiditate, dignissimos neque.
-          </p>
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Nulla vitae est eget turpis
-            accumsan vulputate.
-          </p>
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Nulla vitae est eget turpis
-            accumsan vulputate. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Odio magnam
-            quibusdam recusandae consequuntur cum nisi.
-            Laudantium cumque adipisci nihil sunt atque,
-            eveniet aspernatur! Delectus quas eius iusto
-            laudantium adipisci tempora. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit.
-            Voluptatem pariatur error, sapiente officia
-            eaque voluptatum adipisci ea est asperiores vel
-            tempora magni deserunt cumque saepe perspiciatis
-            natus. Debitis, eum perferendis!Lorem Lorem
-            ipsum dolor, sit amet consectetur adipisicing
-            elit. Eius blanditiis dolor veniam porro odit
-            earum quod? Quod voluptas, praesentium fugiat
-            iure laboriosam eius quas, nisi expedita minus
-            cupiditate, dignissimos neque.
-          </p>
+        <ShowMoreLayout className="text-gray-500 text-sm">
+          Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Nulla vitae est eget turpis accumsan
+          vulputate. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Odio magnam quibusdam recusandae
+          consequuntur cum nisi. Laudantium cumque adipisci
+          nihil sunt atque, eveniet aspernatur! Delectus
+          quas eius iusto laudantium adipisci tempora. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatem pariatur error, sapiente officia eaque
+          voluptatum adipisci ea est asperiores vel tempora
+          magni deserunt cumque saepe perspiciatis natus.
+          Debitis, eum perferendis!Lorem Lorem ipsum dolor,
+          sit amet consectetur adipisicing elit. Eius
+          blanditiis dolor veniam porro odit earum quod?
+          Quod voluptas, praesentium fugiat iure laboriosam
+          eius quas, nisi expedita minus cupiditate,
+          dignissimos neque.
         </ShowMoreLayout>
       </div>
     </div>
