@@ -1,5 +1,6 @@
 import { SectionHeader } from "../../components";
 import React from "react";
+import ContactView from "./ContactView";
 
 export default React.forwardRef(
   (
@@ -16,6 +17,7 @@ export default React.forwardRef(
         id={sectionId}
         className="mb-8 w-full">
         <SectionHeader label="Contact Me" />
+        <ContactView />
       </section>
     );
   }
