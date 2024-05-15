@@ -34,11 +34,12 @@ function WorkExpInfoCard({
         company={company}
         tenure={tenure}
         align={align}
-        className="px-4 py-2 w-full"
+        className="px-4 py-2 w-full md:w-1/2"
       />
       <JobDuties
         description={description}
-        className="md:block hidden px-4 py-2"
+        align={align === "left" ? "right" : "left"}
+        className="md:block hidden px-4 py-2 md:w-2/4"
       />
     </div>
   );
