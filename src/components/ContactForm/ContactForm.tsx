@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { IContactFormValues } from "../../types";
-import { Form } from "../Form";
+import { Form } from "../";
 import classNames from "classnames";
 
 function ContactForm() {

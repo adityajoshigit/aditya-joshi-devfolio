@@ -1,1 +1,2 @@
-export { default as Form, type IFormProps } from "./Form";
+export { default as Form } from "./Form";
+export type { IFormProps } from "./Form";
