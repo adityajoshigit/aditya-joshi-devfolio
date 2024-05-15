@@ -93,4 +93,7 @@ export type WorkExpDetailsType = {
   role: string;
   company: string;
   tenure: string;
+  description?: string;
 };
+
+export type AlignmentType = "left" | "right" | "center";

@@ -2,7 +2,7 @@ import { ContactForm } from "../../components";
 
 function ContactView() {
   return (
-    <div>
+    <div className="md:px-4">
       <ContactForm />
     </div>
   );
