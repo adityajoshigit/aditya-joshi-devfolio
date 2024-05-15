@@ -1,3 +1,4 @@
+import { Fragment } from "react/jsx-runtime";
 import { WorkExpInfoCard } from "../../components";
 import workExpData from "../../data/workExpData";
 import { FaEllipsisVertical } from "react-icons/fa6";
@@ -8,18 +9,18 @@ function WorkExpView() {
       {workExpData.map(
         ({ role, company, tenure, description }, index) => {
           return (
-            <>
+            <Fragment
+              key={`${role
+                .toLowerCase()
+                .trim()
+                .replaceAll(" ", "")}-${company
+                .toLowerCase()
+                .trim()
+                .replaceAll(" ", "")}-${tenure
+                .toLowerCase()
+                .trim()
+                .replaceAll(" ", "")}-${index}`}>
               <WorkExpInfoCard
-                key={`${role
-                  .toLowerCase()
-                  .trim()
-                  .replaceAll(" ", "")}-${company
-                  .toLowerCase()
-                  .trim()
-                  .replaceAll(" ", "")}-${tenure
-                  .toLowerCase()
-                  .trim()
-                  .replaceAll(" ", "")}-${index}`}
                 role={role}
                 company={company}
                 tenure={tenure}
@@ -33,7 +34,7 @@ function WorkExpView() {
                   <FaEllipsisVertical />
                 </div>
               ) : null}
-            </>
+            </Fragment>
           );
         }
       )}
