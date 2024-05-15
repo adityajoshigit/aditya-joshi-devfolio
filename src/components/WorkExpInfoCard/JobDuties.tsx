@@ -12,10 +12,8 @@ function JobDuties({
 }: IJobDutiesProps) {
   if (!description) return null;
   return (
-    <div>
-      <ShowMoreLayout className={classNames(className)}>
-        {description}
-      </ShowMoreLayout>
+    <div className={classNames(className)}>
+      <ShowMoreLayout>{description}</ShowMoreLayout>
     </div>
   );
 }

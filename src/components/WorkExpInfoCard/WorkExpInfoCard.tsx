@@ -22,20 +22,23 @@ function WorkExpInfoCard({
 }: IWorkExpInfoCardProps) {
   return (
     <div
-      className={classNames("w-full mx-auto flex group", {
-        "flex-row-reverse": align === "right",
-        "flex-row": align === "left",
-      })}>
+      className={classNames(
+        "w-full mx-auto flex justify-center items-center group ",
+        {
+          "flex-row-reverse": align === "right",
+          "flex-row": align === "left",
+        }
+      )}>
       <EmplymentDetails
         role={role}
         company={company}
         tenure={tenure}
         align={align}
-        className="p-4 w-full md:w-2/5"
+        className="px-4 py-2 w-full"
       />
       <JobDuties
         description={description}
-        className="md:block hidden px-4 p-4 w-3/5"
+        className="md:block hidden px-4 py-2"
       />
     </div>
   );

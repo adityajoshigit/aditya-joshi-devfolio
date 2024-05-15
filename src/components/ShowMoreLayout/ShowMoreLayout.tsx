@@ -22,22 +22,22 @@ function ShowMoreLayout({
           className,
           isMoreShown ? "" : "h-[100px] overflow-hidden "
         )}>
-        <div className="inset-0 flex flex-col justify-start items-center pb-2">
+        <div className="inset-0 flex flex-col justify-start items-center">
           <div
             className={classNames(
               "overflow-hidden",
-              isMoreShown ? "" : "shadow-md"
+              isMoreShown ? "" : ""
             )}>
             {children}
           </div>
         </div>
-      </div>
-      <div className="text-right w-full group">
-        <button
-          className="group-hover:text-neutral-700 text-neutral-500 text-sm hover:text-neutral-800 underline underline-offset-2 hover:underline italic hover:cursor-pointer"
-          onClick={() => toggleState()}>
-          {isMoreShown ? "Show Less" : "Show More"}
-        </button>
+        <div className="text-right w-full group">
+          <button
+            className="group-hover:text-neutral-700 text-neutral-500 text-sm hover:text-neutral-800 underline underline-offset-2 hover:underline italic hover:cursor-pointer"
+            onClick={() => toggleState()}>
+            {isMoreShown ? "Show Less" : "Show More"}
+          </button>
+        </div>
       </div>
     </>
   );
