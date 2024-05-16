@@ -37,7 +37,6 @@ function App() {
         <div
           className={`
             ml-auto 
-            p-6 
             md:p-0
             w-full 
             md:w-3/5 

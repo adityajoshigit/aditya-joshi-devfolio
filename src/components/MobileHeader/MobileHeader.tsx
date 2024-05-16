@@ -26,7 +26,7 @@ function MobileHeader({
   return (
     <div
       className={classNames(
-        "top-0 left-0 sticky flex flex-row md:hidden px-4 py-2 w-full",
+        "top-0 left-0 sticky flex flex-row md:hidden px-4 py-2 w-full z-50",
         theme === "LIGHT" ? BG_BRAND : BG_WHITE,
         theme === "LIGHT" ? TEXT_WHITE : TEXT_BRAND
       )}>
